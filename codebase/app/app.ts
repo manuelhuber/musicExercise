@@ -4,31 +4,28 @@ import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
 
-
 @Component({
   templateUrl: 'build/app.html'
 })
 class MyApp {
-  @ViewChild(Nav) nav: Nav;
+  @ViewChild(Nav) nav : Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage: any = HelloIonicPage;
-  pages: Array<{title: string, component: any}>;
+  rootPage : any = HelloIonicPage;
+  pages : Array<{title : string, component : any}>;
 
-  constructor(
-    private platform: Platform,
-    private menu: MenuController
-  ) {
+  constructor (private platform : Platform,
+               private menu : MenuController) {
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      {title: 'Hello Ionic', component: HelloIonicPage},
+      {title: 'My First List', component: ListPage}
     ];
   }
 
-  initializeApp() {
+  initializeApp () {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -36,7 +33,7 @@ class MyApp {
     });
   }
 
-  openPage(page) {
+  openPage (page) {
     // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
