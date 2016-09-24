@@ -3,9 +3,12 @@ import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
+import {FingerControl} from './pages/finger-control/finger-control';
+import {ExerciseService} from './difficulty-service/difficutly-service';
 
 @Component({
-  templateUrl: 'build/app.html'
+  templateUrl: 'build/app.html',
+  providers: [ExerciseService]
 })
 class MyApp {
   @ViewChild(Nav) nav : Nav;
@@ -21,11 +24,12 @@ class MyApp {
     // set our app's pages
     this.pages = [
       {title: 'Hello Ionic', component: HelloIonicPage},
-      {title: 'My First List', component: ListPage}
+      {title: 'My First List', component: ListPage},
+      {title: 'Finger Control', component: FingerControl}
     ];
   }
 
-  initializeApp () {
+  initializeApp () : any {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -33,7 +37,7 @@ class MyApp {
     });
   }
 
-  openPage (page) {
+  openPage (page : any) : any {
     // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
