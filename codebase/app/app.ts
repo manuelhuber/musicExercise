@@ -3,8 +3,9 @@ import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
-import {FingerControl} from './pages/finger-control/finger-control';
+import {FingerControl} from './pages/exercises/finger-control/finger-control';
 import {ExerciseService} from './difficulty-service/difficutly-service';
+import {ExerciseList} from './pages/exercises/exercise-list';
 
 @Component({
   templateUrl: 'build/app.html',
@@ -14,7 +15,7 @@ class MyApp {
   @ViewChild(Nav) nav : Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage : any = HelloIonicPage;
+  rootPage : any = ExerciseList;
   pages : Array<{title : string, component : any}>;
 
   constructor (private platform : Platform,
@@ -25,7 +26,8 @@ class MyApp {
     this.pages = [
       {title: 'Hello Ionic', component: HelloIonicPage},
       {title: 'My First List', component: ListPage},
-      {title: 'Finger Control', component: FingerControl}
+      {title: 'Finger Control', component: FingerControl},
+      {title: 'Foo', component: ExerciseList}
     ];
   }
 

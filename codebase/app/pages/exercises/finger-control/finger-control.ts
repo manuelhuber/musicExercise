@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import {rndNumber} from '../../core/util';
-import {ExerciseService, ExerciseDifficulty} from '../../difficulty-service/difficutly-service';
-import {Finger, fingerSortingFunction} from '../../core/model/finger';
+import {rndNumber} from '../../../core/util';
+import {ExerciseService, ExerciseDifficulty} from '../../../difficulty-service/difficutly-service';
+import {Finger, fingerSortingFunction} from '../../../core/model/finger';
 
 @Component({
-  templateUrl: 'build/pages/finger-control/finger-control.html'
+  templateUrl: 'build/pages/exercises/finger-control/finger-control.html'
 })
 export class FingerControl {
   difficulty : ExerciseDifficulty;

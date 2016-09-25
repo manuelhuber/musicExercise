@@ -23,11 +23,11 @@ export class Finger {
   /**
    * Format: {{Hand}}{{Finger}}
    * Hand is either 'L' or 'R'
-   * Finger is the number as defined in the Finger class
+   * Finger is the number as defined in the Finger class plus 1 (since normal people don't like zero indexing)
    */
   toString () : string {
     let s : string = this.hand === 0 ? 'L' : 'R';
-    s += this.finger;
+    s += (this.finger + 1);
     return s;
   }
 
@@ -43,6 +43,6 @@ export function fingerSortingFunction (a : Finger, b : Finger) : number {
   } else if (a.hand > b.hand) {
     return 1;
   } else {
-    return a.hand === 0 ? a.finger - b.finger : b.finger - a.finger;
+    return a.hand === 0 ? b.finger - a.finger : a.finger - b.finger;
   }
 }

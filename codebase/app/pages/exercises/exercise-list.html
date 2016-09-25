@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Exercises</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let exercise of exercises" (click)="exerciseTapped(exercise)">
+      <ion-icon name="{{exercise.icon}}" item-left></ion-icon>
+      {{exercise.title}}
+    </button>
+  </ion-list>
+</ion-content>
