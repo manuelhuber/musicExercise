@@ -7,21 +7,27 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <h3>Welcome to your first Ionic app!</h3>
 
+  <h3>Welcome to your first Ionic app!</h3>
   <p>
     This starter project is our way of helping you get a functional app running in record time.
   </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-    wtf
-  </p>
-  <p>
-    <button primary menuToggle>Toggle Menu</button>
-  </p>
-  <div>
-    <h1> {{fingerString}} </h1>
-  </div>
 
-  <button (click)="newExercise()">Next</button>
+  <button class="finger-control-button" (click)="newExercise()">
+
+    <div class="finger-control-button-shadow"
+         [style.transition]="timerDelayString"
+         [style.right]="rightDistance"></div>
+
+    <div class="finger-control-button-content">
+      <h1> {{fingerString}} </h1>
+    </div>
+  </button>
+
+  <div class="finger-control-time">
+    <ion-checkbox [(ngModel)]="automaticNext"></ion-checkbox>
+    <span>Automatic next every</span>
+    <ion-input class="finger-control-time-input" type="number" [(ngModel)]="timerSeconds"></ion-input>
+    <span>Seconds</span>
+  </div>
 </ion-content>

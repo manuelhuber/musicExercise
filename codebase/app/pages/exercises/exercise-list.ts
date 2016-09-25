@@ -18,7 +18,7 @@ export class ExerciseList {
     this.exercises = [{
       title: 'Finger Control',
       page: FingerControl,
-      icon: 'flask'
+      icon: 'hand'
     }];
   }
 
