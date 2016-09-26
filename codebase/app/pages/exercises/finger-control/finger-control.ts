@@ -49,6 +49,17 @@ export class FingerControl {
     return this.animationActive ? '0' : '100%';
   }
 
+  get difficulty () : number {
+    return this.exerciseService ? this.exerciseService.getDifficulty().fingerControl : 1;
+  };
+
+  set difficulty (dif : number) {
+    let number2 : number = parseInt(<any>dif, 10);
+    if (this.exerciseService && !isNaN(number2)) {
+      this.exerciseService.setFingerControlDifficulty(number2);
+    }
+  }
+
   constructor (private exerciseService : ExerciseService) {
     this.newExercise();
     this.total = 0;
@@ -82,7 +93,7 @@ export class FingerControl {
   }
 
   getNumberOfFingers () : number {
-    let fingers : number = rndNumber(1, 2 + this.exerciseService.getDifficulty().fingerControl);
+    let fingers : number = rndNumber(1, 2 + this.difficulty);
     if (fingers > 6) {
       return 6;
     } else if (fingers < 1) {

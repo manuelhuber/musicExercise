@@ -13,6 +13,11 @@
     This starter project is our way of helping you get a functional app running in record time.
   </p>
 
+  <div>
+    <span>Select difficulty: </span>
+    <ion-input class="finger-control-time-input" type="number" min="1" [(ngModel)]="difficulty"></ion-input>
+  </div>
+
   <button class="finger-control-button" (click)="buttonClick()">
 
     <div class="finger-control-button-shadow"
