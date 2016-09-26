@@ -54,6 +54,14 @@ export class FingerControl {
     this.total = 0;
   }
 
+  buttonClick () : void {
+    this.cancelTimeout();
+    this.newExercise();
+    if (this.automaticNext) {
+      this.startTimeout();
+    }
+  }
+
   newExercise () : void {
     this.fingerString = this.getExercise();
     this.total++;
