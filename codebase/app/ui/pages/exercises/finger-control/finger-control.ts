@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {rndNumber} from '../../../core/util';
-import {ExerciseService} from '../../../difficulty-service/difficutly-service';
-import {Finger, fingerSortingFunction} from '../../../core/model/finger';
+import {rndNumber} from '../../../../data/core/util';
+import {ExerciseService} from '../../../../data/exercise-service/exercise-service';
+import {Finger, fingerSortingFunction} from '../../../../data/core/model/finger';
 
 const TIMER_MINIMUM : number = 0.5;
 
 @Component({
-  templateUrl: 'build/pages/exercises/finger-control/finger-control.html'
+  templateUrl: 'build/ui/pages/exercises/finger-control/finger-control.html'
 })
 export class FingerControl {
 

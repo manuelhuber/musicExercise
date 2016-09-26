@@ -1,11 +1,9 @@
 import {Component, ViewChild} from '@angular/core';
 import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
-import {ListPage} from './pages/list/list';
-import {FingerControl} from './pages/exercises/finger-control/finger-control';
-import {ExerciseService} from './difficulty-service/difficutly-service';
-import {ExerciseList} from './pages/exercises/exercise-list';
+import {FingerControl} from './ui/pages/exercises/finger-control/finger-control';
+import {ExerciseService} from './data/exercise-service/exercise-service';
+import {ExerciseList} from './ui/pages/exercises/exercise-list';
 
 @Component({
   templateUrl: 'build/app.html',
@@ -24,8 +22,6 @@ class MyApp {
 
     // set our app's pages
     this.pages = [
-      {title: 'Hello Ionic', component: HelloIonicPage},
-      {title: 'My First List', component: ListPage},
       {title: 'Finger Control', component: FingerControl},
       {title: 'Foo', component: ExerciseList}
     ];

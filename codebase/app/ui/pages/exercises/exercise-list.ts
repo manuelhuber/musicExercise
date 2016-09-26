@@ -9,7 +9,7 @@ export interface ExercisesListEntry {
 }
 
 @Component({
-  templateUrl: 'build/pages/exercises/exercise-list.html'
+  templateUrl: 'build/ui/pages/exercises/exercise-list.html'
 })
 export class ExerciseList {
   exercises : ExercisesListEntry[];
