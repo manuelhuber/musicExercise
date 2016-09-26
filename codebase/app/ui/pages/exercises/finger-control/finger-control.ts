@@ -14,6 +14,7 @@ export class FingerControl {
   total : number = 0;
 
   _automaticNext : boolean = false;
+  // Used to set the CSS styles to the loading bar inside the button
   animationActive : boolean;
 
   // Timer in ms
@@ -41,10 +42,17 @@ export class FingerControl {
     return this._automaticNext;
   }
 
-  get timerDelayString () : string {
+  /**
+   * Returns the string value for the CSS transition style of the loading bar
+   * no animation === no transition
+   */
+  get transitionString () : string {
     return this.animationActive ? 'all ' + this.timerSeconds + 's linear' : 'none';
   }
 
+  /**
+   * Returns the string value for the CSS width style of the loading bar
+   */
   get rightDistance () : string {
     return this.animationActive ? '0' : '100%';
   }
@@ -65,6 +73,11 @@ export class FingerControl {
     this.total = 0;
   }
 
+  /**
+   * The fat button in the middle of the screen
+   * On click a new exercise is generated
+   * If automatic exercise is enabled, the timer (and loading bar) is reset
+   */
   buttonClick () : void {
     this.cancelTimeout();
     this.newExercise();
@@ -73,16 +86,24 @@ export class FingerControl {
     }
   }
 
+  /**
+   * Sets a new exercise and ups the counter
+   */
   newExercise () : void {
     this.fingerString = this.getExercise();
     this.total++;
   }
 
+  /**
+   * Generates a new string for the finger exercise
+   */
   getExercise () : string {
     let fingers : Finger[] = [];
     let max : number = this.getNumberOfFingers();
     while (fingers.length < max && fingers.length < 10) {
+      // Constructor creates a random finger
       let potentialFinger : Finger = new Finger();
+      // Add the finger if its not in the array already
       if (!fingers.some(finger => finger.finger === potentialFinger.finger && finger.hand === potentialFinger.hand)) {
         fingers.push(potentialFinger);
       }
@@ -92,18 +113,22 @@ export class FingerControl {
     return fingers.join(' ');
   }
 
+  /**
+   * Gets the number of fingers depending on the difficulty
+   * The difficulty is the max number of fingers possible
+   * @return number between 1 and 10
+   */
   getNumberOfFingers () : number {
-    let fingers : number = rndNumber(1, 2 + this.difficulty);
-    if (fingers > 6) {
-      return 6;
-    } else if (fingers < 1) {
-      return 1;
-    } else {
-      return fingers;
-    }
+    let fingers : number = rndNumber(1, this.difficulty);
+    // only return numbers between 1 and 10
+    return fingers > 10 ? 10 : fingers < 1 ? 1 : fingers;
   }
 
+  /**
+   * Start a new timer and animation
+   */
   private startTimeout () : void {
+    // Reset animation
     this.animationActive = false;
     // This timeout is needed to make sure the loading thingy is reset
     setTimeout(() => {
