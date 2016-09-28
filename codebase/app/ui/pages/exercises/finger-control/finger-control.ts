@@ -62,9 +62,9 @@ export class FingerControl {
   };
 
   set difficulty (dif : number) {
-    let number2 : number = parseInt(<any>dif, 10);
-    if (this.exerciseService && !isNaN(number2)) {
-      this.exerciseService.setFingerControlDifficulty(number2);
+    let newDifficulty : number = parseInt(<any>dif, 10);
+    if (this.exerciseService && !isNaN(newDifficulty)) {
+      this.exerciseService.setFingerControlDifficulty(newDifficulty);
     }
   }
 
