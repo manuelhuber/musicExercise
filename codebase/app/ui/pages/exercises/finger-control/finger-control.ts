@@ -110,7 +110,7 @@ export class FingerControl {
     }
     fingers.sort(fingerSortingFunction);
     fingers.map(finger => finger.toString());
-    return fingers.join(' ');
+    return fingers.join('-');
   }
 
   /**
@@ -119,7 +119,8 @@ export class FingerControl {
    * @return number between 1 and 10
    */
   getNumberOfFingers () : number {
-    let fingers : number = rndNumber(1, this.difficulty);
+    let min : number = this.difficulty > 3 ? 2 : 1;
+    let fingers : number = rndNumber(min, this.difficulty);
     // only return numbers between 1 and 10
     return fingers > 10 ? 10 : fingers < 1 ? 1 : fingers;
   }

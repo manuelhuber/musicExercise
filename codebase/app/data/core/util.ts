@@ -1,6 +1,5 @@
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)
- * Using Math.round() will give you a non-uniform distribution!
  */
 export function rndNumber (min : number, max : number) : number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -40,4 +39,12 @@ export function noteToString (note : number, decrease? : boolean) : string {
     default:
       throw new Error('Math broke');
   }
+}
+
+const NOTE_SERPERATOR : string = '/';
+
+export function noteToAllCombinedStrings (note : number) : string {
+  let a : string = noteToString(note, false);
+  let b : string = noteToString(note, true);
+  return a === b ? a : [a, NOTE_SERPERATOR, b].join(' ');
 }
