@@ -5,5 +5,12 @@ export const de : any = {
     'explanation': 'Bewegen sie nur die unten aufgeführten Finger. Die Buchstaben L und R stehen für die linke bzw ' +
     'rechte Hand. Die Zahl dahinter steht für den Finger. 1 = Daumen, 5 = kleiner Finger. Klicken sie auf den großen' +
     'Button um die nächsten Finger zu trainieren.'
+  },
+  'intervals': {
+    'title': 'Intervalle',
+    'heading': 'Intervalle foobar',
+    'explanation': 'Bewegen sie nur die unten aufgeführten Finger. Die Buchstaben L und R stehen für die linke bzw ' +
+    'rechte Hand. Die Zahl dahinter steht für den Finger. 1 = Daumen, 5 = kleiner Finger. Klicken sie auf den großen' +
+    'Button um die nächsten Finger zu trainieren.'
   }
 };

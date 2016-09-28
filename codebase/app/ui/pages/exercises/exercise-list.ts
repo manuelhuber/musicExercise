@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {FingerControl} from './finger-control/finger-control';
+import {Intervals} from './intervals/intervals';
 
 export interface ExercisesListEntry {
   title : string;
@@ -19,6 +20,10 @@ export class ExerciseList {
       title: 'Finger Control',
       page: FingerControl,
       icon: 'hand'
+    }, {
+      title: 'Intervals',
+      page: Intervals,
+      icon: 'barcode'
     }];
   }
 

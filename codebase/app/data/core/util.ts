@@ -11,6 +11,7 @@ export function randomNote () : number {
 
 export function noteToString (note : number, decrease? : boolean) : string {
   let saveNote : number = note % 12;
+  saveNote = Math.abs(saveNote);
   switch (saveNote) {
     case 0:
       return 'A';
@@ -39,6 +40,12 @@ export function noteToString (note : number, decrease? : boolean) : string {
     default:
       throw new Error('Math broke');
   }
+}
+
+export function stepsDown (startingNote : number, steps : number) : number {
+  let difference : number = startingNote - steps;
+  difference = difference > 0 ? difference : 12 + difference;
+  return Math.abs(difference) % 12;
 }
 
 const NOTE_SERPERATOR : string = '/';
