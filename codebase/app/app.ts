@@ -1,9 +1,10 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, PLATFORM_DIRECTIVES, provide} from '@angular/core';
 import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {FingerControl} from './ui/pages/exercises/finger-control/finger-control';
 import {ExerciseService} from './data/exercise-service/exercise-service';
 import {ExerciseList} from './ui/pages/exercises/exercise-list';
+import {TranslateDirective} from './data/translate/translate-directive';
 
 @Component({
   templateUrl: 'build/app.html',
@@ -43,4 +44,4 @@ class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp, [provide(PLATFORM_DIRECTIVES, {useValue: [TranslateDirective], multi: true})]);
