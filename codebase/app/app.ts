@@ -5,10 +5,11 @@ import {FingerControl} from './ui/pages/exercises/finger-control/finger-control'
 import {ExerciseService} from './data/exercise-service/exercise-service';
 import {ExerciseList} from './ui/pages/exercises/exercise-list';
 import {TranslateDirective} from './data/translate/translate-directive';
+import {TranslateService} from './data/translate/translate-service';
 
 @Component({
   templateUrl: 'build/app.html',
-  providers: [ExerciseService]
+  providers: [ExerciseService, TranslateService]
 })
 class MyApp {
   @ViewChild(Nav) nav : Nav;
