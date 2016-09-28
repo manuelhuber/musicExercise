@@ -11,12 +11,6 @@
   <h3 translate="fingerControl.heading"></h3>
   <div translate="fingerControl.explanation"></div>
 
-
-  <div>
-    <span>Select difficulty: </span>
-    <ion-input class="finger-control-time-input" type="number" min="1" [(ngModel)]="difficulty"></ion-input>
-  </div>
-
   <button class="finger-control-button" (click)="buttonClick()">
 
     <div class="finger-control-button-loading-bar"
@@ -24,9 +18,14 @@
          [style.right]="rightDistance"></div>
 
     <div class="finger-control-button-content">
-      <h1> {{fingerString}} </h1>
+      <h1>{{fingerString}}</h1>
     </div>
   </button>
+
+  <div>
+    <span>Select difficulty: </span>
+    <ion-input class="finger-control-time-input" type="number" min="1" [(ngModel)]="difficulty"></ion-input>
+  </div>
 
   <div class="finger-control-time">
     <ion-checkbox [(ngModel)]="automaticNext"></ion-checkbox>
