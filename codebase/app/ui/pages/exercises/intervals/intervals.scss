@@ -1,29 +1,44 @@
+$exercise-height: 90px;
+
 .intervals-exercise {
   margin: 30px 0;
-  height: 90px;
+  height: $exercise-height;
 }
 
-.intervals-middle {
+.intervals-exercise-middle {
   overflow: hidden;
   text-align: center;
+  font-size: 5em;
+  line-height: $exercise-height;
 }
 
-.intervals-left {
-  width: 50px;
+.intervals-exercise-left, .intervals-exercise-right {
+  width: 25%;
   height: 100%;
+}
+
+.intervals-exercise-left {
   float: left;
 }
 
-.intervals-right {
-  width: 50px;
-  height: 100%;
+.intervals-exercise-right {
   float: right;
   text-align: right;
 }
 
+.intervals-exercise-side-content {
+  height: 100%;
+  line-height: $exercise-height;
+}
+
+.interval-arrow-content, .intervals-arrow-icon {
+  vertical-align: middle;
+}
+
 .interval-arrow-content {
+  font-size: 2em;
 }
 
 .intervals-arrow-icon {
-  font-size: 40px;
+  font-size: 2.5em;
 }
