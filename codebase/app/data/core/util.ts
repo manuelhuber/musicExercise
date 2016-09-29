@@ -5,10 +5,19 @@ export function rndNumber (min : number, max : number) : number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+/**
+ * A random note, repestented by a number between 0 for A and 11 for G#
+ */
 export function randomNote () : number {
   return rndNumber(0, 11);
 }
 
+/**
+ * Returns the note as a nice string
+ * The "black key" notes are by default returned as the # version
+ * @param note 0 = A, 11 = G#
+ * @param decrease true if you want the "b-version" instead of # of the note (example: Db instead of C#)
+ */
 export function noteToString (note : number, decrease? : boolean) : string {
   let saveNote : number = note % 12;
   saveNote = Math.abs(saveNote);
@@ -42,16 +51,27 @@ export function noteToString (note : number, decrease? : boolean) : string {
   }
 }
 
+const NOTE_SEPARATOR : string = ' / ';
+
+/**
+ * Returns a single string for all usual names of the note
+ * For "white key" notes it will return only their single normal name
+ * For "black key" notes it will return both variations with the given separator (or default)
+ */
+export function noteToAllCombinedStrings (note : number, separator : string = NOTE_SEPARATOR) : string {
+  let a : string = noteToString(note, false);
+  let b : string = noteToString(note, true);
+  return a === b ? a : [a, separator, b].join('');
+}
+
+/**
+ * Returns the resulting note when going down the given amount fo steps from the starting note
+ * @param startingNote
+ * @param steps
+ * @return {number}
+ */
 export function stepsDown (startingNote : number, steps : number) : number {
   let difference : number = startingNote - steps;
   difference = difference > 0 ? difference : 12 + difference;
   return Math.abs(difference) % 12;
-}
-
-const NOTE_SERPERATOR : string = '/';
-
-export function noteToAllCombinedStrings (note : number) : string {
-  let a : string = noteToString(note, false);
-  let b : string = noteToString(note, true);
-  return a === b ? a : [a, NOTE_SERPERATOR, b].join(' ');
 }
