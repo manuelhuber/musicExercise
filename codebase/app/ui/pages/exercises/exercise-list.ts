@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {FingerControl} from './finger-control/finger-control';
 import {Intervals} from './intervals/intervals';
+import {TranslateService} from '../../../data/translate/translate-service';
 
 export interface ExercisesListEntry {
   title : string;
@@ -15,13 +16,13 @@ export interface ExercisesListEntry {
 export class ExerciseList {
   exercises : ExercisesListEntry[];
 
-  constructor (private navCtrl : NavController) {
+  constructor (private navCtrl : NavController, translate : TranslateService) {
     this.exercises = [{
-      title: 'Finger Control',
+      title: translate.translate('fingerControl.title'),
       page: FingerControl,
       icon: 'hand'
     }, {
-      title: 'Intervals',
+      title: translate.translate('intervals.title'),
       page: Intervals,
       icon: 'barcode'
     }];
