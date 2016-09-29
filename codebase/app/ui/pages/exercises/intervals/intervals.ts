@@ -27,7 +27,10 @@ export class Intervals {
   }
 
   newInterval () : void {
-    this.nextInterval = rndNumber(1, 11);
+    let lastInterval : number = this.nextInterval;
+    while (this.nextInterval === lastInterval) {
+      this.nextInterval = rndNumber(1, 11);
+    }
     this.nextIntervalIsUp = Math.random() < 0.5;
   }
   
