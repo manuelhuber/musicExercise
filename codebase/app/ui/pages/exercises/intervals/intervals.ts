@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {noteToString, randomNote, rndNumber, stepsDown} from '../../../../data/core/util';
+import {randomNote, rndNumber, stepsDown, noteToAllCombinedStrings} from '../../../../data/core/util';
 
 @Component({
   templateUrl: 'build/ui/pages/exercises/intervals/intervals.html'
@@ -11,7 +11,7 @@ export class Intervals {
   currentNote : number;
 
   constructor () {
-    this['noteToString'] = noteToString;
+    this['noteToString'] = noteToAllCombinedStrings;
     this.currentNote = randomNote();
     this.newInterval();
   }
@@ -33,5 +33,5 @@ export class Intervals {
     }
     this.nextIntervalIsUp = Math.random() < 0.5;
   }
-  
+
 }
