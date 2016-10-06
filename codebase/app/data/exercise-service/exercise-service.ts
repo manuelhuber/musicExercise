@@ -21,7 +21,7 @@ export class ExerciseService {
   }
 
   setIntervalsDifficulty (difficulty : number) : void {
-    this.difficulty.fingerControl =
+    this.difficulty.intervals =
       difficulty < 1 ? 1 :
         difficulty > 11 ? 11 :
           difficulty;

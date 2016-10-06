@@ -16,6 +16,7 @@ export const de : any = {
     'heading': 'Kenne dein Alphabet!',
     'explanation': 'Es erscheint eine Note und entweder ein Pfeil nach links oder rechts mit der Anzahl an ' +
     'Halbtonschritten die runter bzw rauf gegangen werden muss. Erarbeite in deinem Kopf welche Note dort liegt und' +
-    'klicke nschließend auf den Pfeil um die Lösung zu sehen und eine neue Richtung & Schrittanzahl zu bekommen.'
+    'klicke nschließend auf den Pfeil um die Lösung zu sehen und eine neue Richtung & Schrittanzahl zu bekommen.',
+    'difficulty': 'Maximale Halbschrittanzahl:'
   }
 };

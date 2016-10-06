@@ -35,7 +35,11 @@
   </div>
 
   <div>
-    <span translate="selectDifficulty"></span>
-    <ion-input class="" type="number" min="1" [(ngModel)]="difficulty"></ion-input>
+    <span translate="intervals.difficulty"></span>
+    <ion-input class="intervals-number-input"
+               type="number"
+               min="1"
+               max="11"
+               [(ngModel)]="difficulty"></ion-input>
   </div>
 </ion-content>
