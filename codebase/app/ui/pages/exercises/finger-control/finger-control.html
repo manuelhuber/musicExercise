@@ -23,8 +23,12 @@
   </button>
 
   <div>
-    <span translate="selectDifficulty"></span>
-    <ion-input class="finger-control-number-input" type="number" min="1" [(ngModel)]="difficulty"></ion-input>
+    <span translate="fingerControl.difficulty"></span>
+    <ion-input class="finger-control-number-input"
+               type="number"
+               min="1"
+               max="5"
+               [(ngModel)]="difficulty"></ion-input>
   </div>
 
   <div class="finger-control-time">
