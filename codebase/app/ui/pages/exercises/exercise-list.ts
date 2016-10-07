@@ -3,6 +3,7 @@ import {NavController} from 'ionic-angular';
 import {FingerControl} from './finger-control/finger-control';
 import {Intervals} from './intervals/intervals';
 import {TranslateService} from '../../../data/translate/translate-service';
+import {Scales} from './scales/scales';
 
 export interface ExercisesListEntry {
   title : string;
@@ -24,6 +25,10 @@ export class ExerciseList {
     }, {
       title: translate.translate('intervals.title'),
       page: Intervals,
+      icon: 'musical-notes'
+    }, {
+      title: translate.translate('scales.title'),
+      page: Scales,
       icon: 'barcode'
     }];
   }
