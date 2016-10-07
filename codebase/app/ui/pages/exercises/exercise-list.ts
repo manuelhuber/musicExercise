@@ -19,15 +19,15 @@ export class ExerciseList {
 
   constructor (private navCtrl : NavController, translate : TranslateService) {
     this.exercises = [{
-      title: translate.translate('fingerControl.title'),
+      title: translate.translate('FINGER_CONTROL.TITLE'),
       page: FingerControl,
       icon: 'hand'
     }, {
-      title: translate.translate('intervals.title'),
+      title: translate.translate('INTERVALS.TITLE'),
       page: Intervals,
       icon: 'musical-notes'
     }, {
-      title: translate.translate('scales.title'),
+      title: translate.translate('SCALES.TITLE'),
       page: Scales,
       icon: 'barcode'
     }];
