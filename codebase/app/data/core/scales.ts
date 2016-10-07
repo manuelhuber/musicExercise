@@ -56,7 +56,7 @@ export const ENIGMATIC : ScaleModel = {
   intervals: [1, 3, 2, 2, 2, 1, 1]
 };
 
-export const SCALES : ScaleModel[] = [
+export const ALL_SCALES : ScaleModel[] = [
   MAJOR,
   MINOR,
   HARMONIC_MINOR,
