@@ -13,19 +13,15 @@ export class ScalesExercise {
   showSolution : boolean;
 
   get intervalInNotes () : string {
-    let string : string = '';
-    if (this.startingNote && this.currentScale) {
-      let currentNote : number = this.startingNote;
-      let noteArray : number[] = this.currentScale.intervals.map((steps : number) => {
-        currentNote += steps;
-        return currentNote;
-      });
-      noteArray.unshift(this.startingNote);
-      string = noteArray.map((note : number) => {
-        return noteToString(note);
-      }).join(' - ');
-    }
-    return string;
+    let currentNote : number = this.startingNote;
+    let noteArray : number[] = this.currentScale.intervals.map((steps : number) => {
+      currentNote += steps;
+      return currentNote;
+    });
+    noteArray.unshift(this.startingNote);
+    return noteArray.map((note : number) => {
+      return noteToString(note);
+    }).join(' - ');
   }
 
   constructor (private translate : TranslateService) {
