@@ -4,6 +4,7 @@ import {FingerControl} from './finger-control/finger-control';
 import {Intervals} from './intervals/intervals';
 import {TranslateService} from '../../../data/translate/translate-service';
 import {ScalesExercise} from './scales-exercise/scales-exercise';
+import {AccordsExercise} from './accords-exercise/accords-exercise';
 
 export interface ExercisesListEntry {
   title : string;
@@ -25,11 +26,15 @@ export class ExerciseList {
     }, {
       title: translate.translate('INTERVALS.TITLE'),
       page: Intervals,
-      icon: 'musical-notes'
+      icon: 'musical-note'
     }, {
       title: translate.translate('SCALES.TITLE'),
       page: ScalesExercise,
       icon: 'barcode'
+    }, {
+      title: translate.translate('ACCORDS.TITLE'),
+      page: AccordsExercise,
+      icon: 'musical-notes'
     }];
   }
 

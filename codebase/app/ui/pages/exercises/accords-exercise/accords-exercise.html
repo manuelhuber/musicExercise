@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p translate="ACCORDS.TITLE"></p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h3 translate="ACCORDS.HEADING"></h3>
+  <div translate="ACCORDS.EXPLANATION"></div>
+
+  <div class="scales-exercise-content" *ngIf="currentAccord">
+
+    <div>
+      {{noteToString(startingNote)}} {{translate.translate(currentAccord.name)}}
+    </div>
+    <div class="m-top-10">
+      {{currentAccord.intervals.toString()}}
+    </div>
+
+    <div class="m-top-20">
+      <div *ngIf="showSolution">
+        <div>{{intervalInNotes}}</div>
+        <button (click)="newAccord()" class="m-top-20"><span translate="ACCORDS.NEW_EXERCISE"></span></button>
+      </div>
+      <div *ngIf="!showSolution">
+        <button (click)="showSolution = true"><span translate="ACCORDS.SHOW_SOLUTION"></span></button>
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>

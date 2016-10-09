@@ -41,6 +41,12 @@ export const de : any = {
     'ENIGMATIC': 'Enigmatic'
   },
   'ACCORDS': {
+    'TITLE': 'Akkorde',
+    'HEADING': 'Übe deine Akkorde!',
+    'EXPLANATION': 'Erarbeite dir den unten angegebenen Akkord für die entsprechende Anfangsnote. Direkt darunter ' +
+    'sind die Halbtonschritte für den Akkord angegeben.',
+    'SHOW_SOLUTION': 'Lösung anzeigen',
+    'NEW_EXERCISE': 'Neuer Akkord',
     'MAJOR_ACCORD': 'Dur-Dreiklang',
     'MINOR_ACCORD': 'Moll-Dreiklang',
     'DOMINANT_SEVENTH': 'Dominant-Septakkord',
