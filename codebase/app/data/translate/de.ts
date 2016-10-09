@@ -83,6 +83,6 @@ export const de : any = {
     'SEVENTH_SHARP_ELEVENTH': 'Dominantseptakkord mit großer None und übermäßiger Undezime',
     'MINOR_ELEVENTH': 'Moll-Septakkord mit großer None und reiner Undezime',
     'THIRTEENTH': 'Dominantseptakkord mit großer None, reiner Undezime und großer Tredezime',
-    'MINOR_THIRTHEENTH': 'Moll-Septakkord mit großer None, reiner Undezime und großer Tredezime'
+    'MINOR_THIRTEENTH': 'Moll-Septakkord mit großer None, reiner Undezime und großer Tredezime'
   }
 };

@@ -167,8 +167,8 @@ export const THIRTEENTH : AccordModel = {
   name: 'ACCORDS.THIRTEENTH',
   intervals: [4, 3, 3, 4, 3, 4]
 };
-export const MINOR_THIRTHEENTH : AccordModel = {
-  name: 'ACCORDS.MINOR_THIRTHEENTH',
+export const MINOR_THIRTEENTH : AccordModel = {
+  name: 'ACCORDS.MINOR_THIRTEENTH',
   intervals: [3, 4, 3, 4, 3, 4]
 };
 
@@ -209,5 +209,5 @@ export const ALL_ACCORDS : AccordModel[] = [
   SEVENTH_SHARP_ELEVENTH,
   MINOR_ELEVENTH,
   THIRTEENTH,
-  MINOR_THIRTHEENTH
+  MINOR_THIRTEENTH
 ];
