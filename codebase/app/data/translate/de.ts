@@ -8,7 +8,7 @@ export const de : any = {
     'EXPLANATION': 'Bewegen sie nur die unten aufgeführten Finger. Die Buchstaben L und R stehen für die linke bzw ' +
     'rechte Hand. Die Zahl dahinter steht für den Finger. 1 = Daumen, 5 = kleiner Finger. Klicken sie auf den großen' +
     'Button um die nächsten Finger zu trainieren.',
-    'automaticNext': 'Automatisch weiterschalten alle',
+    'AUTOMATIC_NEXT': 'Automatisch weiterschalten alle',
     'DIFFICULTY': 'Maximale Fingeranzahl:'
   },
   'INTERVALS': {
