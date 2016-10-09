@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {randomNote, rndNumber, stepsDown, noteToAllCombinedStrings} from '../../../../data/core/util';
+import {randomNote, rndNumber, stepsDown, noteToAllCombinedStrings, noteToString} from '../../../../data/core/util';
 import {ExerciseService} from '../../../../data/exercise-service/exercise-service';
 
 @Component({
@@ -10,6 +10,7 @@ export class Intervals {
   nextInterval : number;
   nextIntervalIsUp : boolean;
   currentNote : number;
+  decreaseNote : boolean;
 
   get difficulty () : number {
     return this.exerciseService ? this.exerciseService.getDifficulty().intervals : 1;
@@ -22,8 +23,11 @@ export class Intervals {
     }
   }
 
+  get currentNoteString () : string {
+    return noteToString(this.currentNote, this.decreaseNote);
+  }
+
   constructor (private exerciseService : ExerciseService) {
-    this['noteToString'] = noteToAllCombinedStrings;
     this.currentNote = randomNote();
     this.newInterval();
   }
@@ -44,6 +48,7 @@ export class Intervals {
       this.nextInterval = rndNumber(1, this.difficulty);
     }
     this.nextIntervalIsUp = Math.random() < 0.5;
+    this.decreaseNote = Math.random() < 0.5;
   }
 
 }
