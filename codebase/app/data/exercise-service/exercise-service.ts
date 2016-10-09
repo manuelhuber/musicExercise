@@ -34,7 +34,7 @@ export class ExerciseService {
   static getDefaultDifficulty () : ExerciseDifficulty {
     return {
       fingerControl: 2,
-      intervals: 2
+      intervals: 8
     };
   }
 }
