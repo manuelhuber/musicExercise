@@ -34,7 +34,7 @@ export class Finger {
 }
 
 /**
- * Sort fingers from left to right.
+ * Sort fingers from left to right when holding them straight out, hand backside towards you.
  * Left Pinky < Left Thumb < Right Thumb < Right Pinky
  */
 export function fingerSortingFunction (a : Finger, b : Finger) : number {
