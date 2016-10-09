@@ -12,24 +12,25 @@
   <h3 translate="SCALES.HEADING"></h3>
   <div translate="SCALES.EXPLANATION"></div>
 
-  <div class="scales-exercise">
-    <div>{{noteToString(startingNote)}}</div>
-    <div>{{translate.translate(currentScale.name)}}</div>
-    <div>{{currentScale.intervals.toString()}}</div>
+  <div class="scales-exercise-content" *ngIf="currentScale">
 
+    <div>
+      {{noteToString(startingNote)}} {{translate.translate(currentScale.name)}}
+    </div>
+    <div class="m-top-10">
+      {{currentScale.intervals.toString()}}
+    </div>
 
+    <div class="m-top-20">
+      <div *ngIf="showSolution">
+        <div>{{intervalInNotes}}</div>
+        <button (click)="newScale()" class="m-top-20"><span translate="SCALES.NEW_EXERCISE"></span></button>
+      </div>
+      <div *ngIf="!showSolution">
+        <button (click)="showSolution = true"><span translate="SCALES.SHOW_SOLUTION"></span></button>
+      </div>
 
-
-
-
-
-
-
-
-
-
-
-    <div>{{intervalInNotes}}</div>
+    </div>
   </div>
 
 </ion-content>

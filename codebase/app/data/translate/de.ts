@@ -22,7 +22,10 @@ export const de : any = {
   'SCALES': {
     'TITLE': 'Tonleiter',
     'HEADING': 'Tonleiter sind nur Folgen von Halbtonschritten!',
-    'EXPLANATION': 'foobar'
+    'EXPLANATION': 'Erarbeite dir die unten angegebene Tonleiter für die entsprechende Anfangsnote. Direkt darunter ' +
+    'sind die Halbtonschritte für die Tonleiter angegeben.',
+    'SHOW_SOLUTION': 'Lösung anzeigen',
+    'NEW_EXERCISE': 'Neue Tonleiter'
   },
   'MAJOR': 'Dur',
   'MINOR': 'Natürliche Moll',

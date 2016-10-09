@@ -4,7 +4,18 @@
 // These are the imports which make up the design of this app.
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
-
 @import "../ui/pages/exercises/finger-control/finger-control";
 @import "../ui/pages/exercises/intervals/intervals";
 @import "../ui/pages/exercises/scales-exercise/scales-exercise";
+
+@for $i from 1 through 50 {
+  .m-top-#{$i} {
+    margin-top: 1px * $i;
+  }
+}
+
+@for $i from 1 through 50 {
+  .m-bottom-#{$i} {
+    margin-bottom: 1px * $i;
+  }
+}

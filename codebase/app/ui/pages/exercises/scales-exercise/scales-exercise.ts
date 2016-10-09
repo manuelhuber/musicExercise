@@ -10,6 +10,7 @@ export class ScalesExercise {
 
   startingNote : number;
   currentScale : ScaleModel;
+  showSolution : boolean;
 
   get intervalInNotes () : string {
     let string : string = '';
@@ -36,7 +37,8 @@ export class ScalesExercise {
     this.startingNote = randomNote();
     let oldScale : ScaleModel = this.currentScale;
     while (oldScale === this.currentScale) {
-      this.currentScale = ALL_SCALES[rndNumber(0, ALL_SCALES.length)];
+      this.currentScale = ALL_SCALES[rndNumber(0, ALL_SCALES.length - 1)];
     }
+    this.showSolution = false;
   }
 }
