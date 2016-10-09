@@ -25,19 +25,19 @@ export const de : any = {
     'EXPLANATION': 'Erarbeite dir die unten angegebene Tonleiter für die entsprechende Anfangsnote. Direkt darunter ' +
     'sind die Halbtonschritte für die Tonleiter angegeben.',
     'SHOW_SOLUTION': 'Lösung anzeigen',
-    'NEW_EXERCISE': 'Neue Tonleiter'
-  },
-  'MAJOR': 'Dur',
-  'MINOR': 'Natürliche Moll',
-  'HARMONIC_MINOR': 'Harmonische Moll',
-  'HUNGARIAN_MINOR': 'Ungarische Moll',
-  'HUNGARIAN_MAJOR': 'Ungarische Dur',
-  'BLUES': 'Blues',
-  'PENTATONIC_MAJOR': 'Pentatonische Dur',
-  'PENTATONIC_MINOR': 'Pentatonische Moll',
-  'SPANISH_EIGHT': 'Spanische Acht-Ton',
-  'ORIENTAL': 'Orientalisch',
-  'REDUCED': 'Vermindert',
-  'OVERTONE': 'Oberton',
-  'ENIGMATIC': 'Enigmatic'
+    'NEW_EXERCISE': 'Neue Tonleiter',
+    'MAJOR': 'Dur',
+    'MINOR': 'Natürliche Moll',
+    'HARMONIC_MINOR': 'Harmonische Moll',
+    'HUNGARIAN_MINOR': 'Ungarische Moll',
+    'HUNGARIAN_MAJOR': 'Ungarische Dur',
+    'BLUES': 'Blues',
+    'PENTATONIC_MAJOR': 'Pentatonische Dur',
+    'PENTATONIC_MINOR': 'Pentatonische Moll',
+    'SPANISH_EIGHT': 'Spanische Acht-Ton',
+    'ORIENTAL': 'Orientalisch',
+    'REDUCED': 'Vermindert',
+    'OVERTONE': 'Oberton',
+    'ENIGMATIC': 'Enigmatic'
+  }
 };

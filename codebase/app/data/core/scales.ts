@@ -3,62 +3,62 @@ export interface ScaleModel {
   intervals : number[];
 }
 
-export const MAJOR : ScaleModel = {
-  name: 'MAJOR',
+export const MAJOR_SCALE : ScaleModel = {
+  name: 'SCALES.MAJOR',
   intervals: [2, 2, 1, 2, 2, 2, 1]
 };
-export const MINOR : ScaleModel = {
-  name: 'MINOR',
+export const MINOR_SCALE : ScaleModel = {
+  name: 'SCALES.MINOR',
   intervals: [2, 1, 2, 2, 1, 2, 2]
 };
 export const HARMONIC_MINOR : ScaleModel = {
-  name: 'HARMONIC_MINOR',
+  name: 'SCALES.HARMONIC_MINOR',
   intervals: [2, 1, 2, 2, 1, 3, 1]
 };
 export const HUNGARIAN_MINOR : ScaleModel = {
-  name: 'HUNGARIAN_MINOR',
+  name: 'SCALES.HUNGARIAN_MINOR',
   intervals: [2, 1, 3, 1, 1, 3, 1]
 };
 export const HUNGARIAN_MAJOR : ScaleModel = {
-  name: 'HUNGARIAN_MAJOR',
+  name: 'SCALES.HUNGARIAN_MAJOR',
   intervals: [3, 1, 2, 1, 2, 1, 2]
 };
 export const BLUES : ScaleModel = {
-  name: 'BLUES',
+  name: 'SCALES.BLUES',
   intervals: [3, 2, 1, 1, 3, 2]
 };
 export const PENTATONIC_MAJOR : ScaleModel = {
-  name: 'PENTATONIC_MAJOR',
+  name: 'SCALES.PENTATONIC_MAJOR',
   intervals: [2, 2, 3, 2, 3]
 };
 export const PENTATONIC_MINOR : ScaleModel = {
-  name: 'PENTATONIC_MINOR',
+  name: 'SCALES.PENTATONIC_MINOR',
   intervals: [3, 2, 2, 3, 2]
 };
 export const SPANISH_EIGHT : ScaleModel = {
-  name: 'SPANISH_EIGHT',
+  name: 'SCALES.SPANISH_EIGHT',
   intervals: [1, 2, 1, 1, 1, 2, 2, 2]
 };
 export const ORIENTAL : ScaleModel = {
-  name: 'ORIENTAL',
+  name: 'SCALES.ORIENTAL',
   intervals: [1, 3, 1, 1, 3, 1, 2]
 };
 export const REDUCED : ScaleModel = {
-  name: 'REDUCED',
+  name: 'SCALES.REDUCED',
   intervals: [1, 2, 1, 2, 1, 2, 1, 2]
 };
 export const OVERTONE : ScaleModel = {
-  name: 'OVERTONE',
+  name: 'SCALES.OVERTONE',
   intervals: [2, 2, 2, 1, 2, 1, 2]
 };
 export const ENIGMATIC : ScaleModel = {
-  name: 'ENIGMATIC',
+  name: 'SCALES.ENIGMATIC',
   intervals: [1, 3, 2, 2, 2, 1, 1]
 };
 
 export const ALL_SCALES : ScaleModel[] = [
-  MAJOR,
-  MINOR,
+  MAJOR_SCALE,
+  MINOR_SCALE,
   HARMONIC_MINOR,
   HUNGARIAN_MINOR,
   HUNGARIAN_MAJOR,
