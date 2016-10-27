@@ -6,6 +6,7 @@ import {ExerciseService} from './data/exercise-service/exercise-service';
 import {ExerciseList} from './ui/pages/exercises/exercise-list';
 import {TranslateDirective} from './data/translate/translate-directive';
 import {TranslateService} from './data/translate/translate-service';
+import {Settings} from './ui/pages/settings/settings';
 
 @Component({
   templateUrl: 'build/app.html',
@@ -19,14 +20,25 @@ class MyApp {
   pages : Array<{title : string, component : any}>;
 
   constructor (private platform : Platform,
-               private menu : MenuController) {
+               private menu : MenuController,
+               private translate : TranslateService) {
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      {title: 'Finger Control', component: FingerControl},
-      {title: 'Foo', component: ExerciseList}
+      {title: 'EXERCISES', component: ExerciseList},
+      {title: 'SETTINGS', component: Settings}
     ];
+  }
+
+  /**
+   * This is needed to ensure that the title es always translated with the current language.
+   * Using the directive won't work at all.
+   * Translating the title in the this.pages initialization will not change when the language is changed
+   * Calling this function "translate" will cause an error.
+   */
+  translateTitle (foo : string) : string {
+    return this.translate ? this.translate.translate(foo) : '';
   }
 
   initializeApp () : any {

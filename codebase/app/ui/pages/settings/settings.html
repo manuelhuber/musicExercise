@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span translate="exercises"></span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list radio-group [(ngModel)]="language">
+    <ion-item>
+      <ion-label>Deutsch</ion-label>
+      <ion-radio value="de"(click)="deutsch()"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>English</ion-label>
+      <ion-radio value="en" (click)="english()"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>
