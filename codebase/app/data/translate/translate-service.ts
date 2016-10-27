@@ -1,15 +1,29 @@
 import {Injectable} from '@angular/core';
-import {de} from './de';
+import {DE} from './de';
+import {EN} from './en';
+
+const ENGLISH : string = 'en';
+const DEUTSCH : string = 'de';
 
 @Injectable()
 export class TranslateService {
 
-  currentLanguage : any;
-  de : any;
+  private currentLanguage : any;
+  private languages : any = {
+    'en': EN,
+    'de': DE
+  };
 
   constructor () {
-    this.de = de;
-    this.currentLanguage = this.de;
+    this.currentLanguage = this.languages[ENGLISH];
+  }
+
+  getCurrentLanguage () : string {
+    for (let key in this.languages) {
+      if (this.languages.hasOwnProperty(key) && this.languages[key] === this.currentLanguage) {
+        return key;
+      }
+    }
   }
 
   translate (foo : string) : string {
@@ -23,5 +37,13 @@ export class TranslateService {
     } catch (e) {
       return '';
     }
+  }
+
+  english () : void {
+    this.currentLanguage = this.languages[ENGLISH];
+  }
+
+  deutsch () : void {
+    this.currentLanguage = this.languages[DEUTSCH];
   }
 }

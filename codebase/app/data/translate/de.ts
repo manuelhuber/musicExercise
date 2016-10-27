@@ -1,7 +1,8 @@
-export const de : any = {
+export const DE : any = {
   'SELECT_DIFFICULTY': 'Schwierigkeit auswählen:',
   'SECONDS': 'Sekunden',
   'EXERCISES': 'Übungen',
+  'SETTINGS': 'Einstellungen',
   'FINGER_CONTROL': {
     'TITLE': 'Finger Kontrolle',
     'HEADING': 'Haben Sie ihre Finger unter Kontrolle?',
