@@ -3,19 +3,16 @@ import {DE} from './de';
 import {EN} from './en';
 
 const ENGLISH : string = 'en';
-const DEUTSCH : string = 'de';
+const GERMAN : string = 'de';
 
 @Injectable()
 export class TranslateService {
 
   private currentLanguage : any;
-  private languages : any = {
-    'en': EN,
-    'de': DE
-  };
+  private languages : any;
 
   constructor () {
-    this.currentLanguage = this.languages[ENGLISH];
+    this.initializeLanguages();
   }
 
   getCurrentLanguage () : string {
@@ -29,7 +26,7 @@ export class TranslateService {
   translate (foo : string) : string {
     try {
       let path : string[] = foo.split('.');
-      let translation : string = this.currentLanguage;
+      let translation : any = this.currentLanguage;
       path.forEach((word : string) => {
         translation = translation[word];
       });
@@ -43,7 +40,14 @@ export class TranslateService {
     this.currentLanguage = this.languages[ENGLISH];
   }
 
-  deutsch () : void {
-    this.currentLanguage = this.languages[DEUTSCH];
+  german () : void {
+    this.currentLanguage = this.languages[GERMAN];
+  }
+
+  private initializeLanguages () : void {
+    this.languages = {};
+    this.languages[ENGLISH] = EN;
+    this.languages[GERMAN] = DE;
+    this.currentLanguage = this.languages[ENGLISH];
   }
 }

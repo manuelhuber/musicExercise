@@ -15,12 +15,11 @@ export function randomNote () : number {
 /**
  * Returns the note as a nice string
  * The "black key" notes are by default returned as the # version
- * @param note 0 = A, 11 = G#
+ * @param note 0 = A, 11 = G# - Negative numbers will be treated as positive
  * @param decrease true if you want the "b-version" instead of # of the note (example: Db instead of C#)
  */
 export function noteToString (note : number, decrease? : boolean) : string {
-  let saveNote : number = note % 12;
-  saveNote = Math.abs(saveNote);
+  let saveNote : number = Math.abs(note) % 12;
   switch (saveNote) {
     case 0:
       return 'A';

@@ -10,7 +10,7 @@ export class Settings {
   }
 
   deutsch () : void {
-    this.translate.deutsch();
+    this.translate.german();
   }
 
   english () : void {
