@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {randomNote, rndNumber, stepsDown, noteToAllCombinedStrings, noteToString} from '../../../../data/core/util';
-import {ExerciseService} from '../../../../data/exercise-service/exercise-service';
+import {ExerciseService} from '../../../../data/core/services/exercise-service';
 
 @Component({
   templateUrl: 'build/ui/pages/exercises/intervals/intervals.html'

@@ -2,7 +2,7 @@ import {Component, ViewChild, PLATFORM_DIRECTIVES, provide} from '@angular/core'
 import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {FingerControl} from './ui/pages/exercises/finger-control/finger-control';
-import {ExerciseService} from './data/exercise-service/exercise-service';
+import {ExerciseService} from './data/core/services/exercise-service';
 import {ExerciseList} from './ui/pages/exercises/exercise-list';
 import {TranslateDirective} from './data/translate/translate-directive';
 import {TranslateService} from './data/translate/translate-service';

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {rndNumber} from '../../../../data/core/util';
-import {ExerciseService} from '../../../../data/exercise-service/exercise-service';
+import {ExerciseService} from '../../../../data/core/services/exercise-service';
 import {Finger, fingerSortingFunction} from '../../../../data/core/model/finger';
 import {TimerButton} from '../../../components/timer-button/timer-button';
 
