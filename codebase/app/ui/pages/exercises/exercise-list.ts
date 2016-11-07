@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Page} from 'ionic-angular';
 import {NavController} from 'ionic-angular';
 import {FingerControl} from './finger-control/finger-control';
 import {Intervals} from './intervals/intervals';
@@ -13,7 +13,7 @@ export interface ExercisesListEntry {
   icon : string;
 }
 
-@Component({
+@Page({
   templateUrl: 'build/ui/pages/exercises/exercise-list.html'
 })
 export class ExerciseList {

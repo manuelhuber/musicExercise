@@ -1,10 +1,12 @@
-import {Component} from '@angular/core';
-import {ScaleModel, ALL_SCALES} from '../../../../data/core/model/scales';
 import {rndNumber, randomNote, noteToAllCombinedStrings, noteToString} from '../../../../data/core/util';
 import {TranslateService} from '../../../../data/translate/translate-service';
 import {AccordModel, ALL_ACCORDS} from '../../../../data/core/model/accords';
+import {Page} from 'ionic-angular';
 
-@Component({
+/**
+ * The page fo
+ */
+@Page({
   templateUrl: 'build/ui/pages/exercises/accords-exercise/accords-exercise.html'
 })
 export class AccordsExercise {

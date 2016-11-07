@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {Page} from 'ionic-angular';
 import {TranslateService} from '../../../data/translate/translate-service';
 
-@Component({
+@Page({
   templateUrl: 'build/ui/pages/settings/settings.html'
 })
 export class Settings {

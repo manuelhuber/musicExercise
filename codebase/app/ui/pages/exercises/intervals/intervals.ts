@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {randomNote, rndNumber, stepsDown, noteToAllCombinedStrings, noteToString} from '../../../../data/core/util';
+import {randomNote, rndNumber, stepsDown, noteToString} from '../../../../data/core/util';
 import {ExerciseService} from '../../../../data/core/services/exercise-service';
+import {Page} from 'ionic-angular';
 
-@Component({
+@Page({
   templateUrl: 'build/ui/pages/exercises/intervals/intervals.html'
 })
 export class Intervals {

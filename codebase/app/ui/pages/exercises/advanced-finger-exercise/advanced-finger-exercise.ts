@@ -1,9 +1,9 @@
-import {Component} from '@angular/core';
 import {rndNumber} from '../../../../data/core/util';
 import {ExerciseService} from '../../../../data/core/services/exercise-service';
 import {TimerButton} from '../../../components/timer-button/timer-button';
+import {Page} from 'ionic-angular';
 
-@Component({
+@Page({
   templateUrl: 'build/ui/pages/exercises/advanced-finger-exercise/advanced-finger-exercise.html',
   directives: [TimerButton]
 })
