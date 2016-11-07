@@ -10,7 +10,6 @@ import {TimerButton} from '../../../components/timer-button/timer-button';
 export class AdvancedFingerExercise {
 
   exerciseString : string;
-  total : number = 0;
 
   // Needed to pass a callback to a child component
   onButtonClick : Function;
@@ -29,15 +28,17 @@ export class AdvancedFingerExercise {
   constructor (private exerciseService : ExerciseService) {
     this.newExercise();
     this.onButtonClick = this.newExercise.bind(this);
-    this.total = 0;
   }
 
   /**
    * Sets a new exercise and ups the counter
    */
   newExercise () : void {
-    this.exerciseString = this.getExercise();
-    this.total++;
+    let newExercise : string;
+    do {
+      newExercise = this.getExercise();
+    } while (newExercise === this.exerciseString);
+    this.exerciseString = newExercise;
   }
 
   /**
