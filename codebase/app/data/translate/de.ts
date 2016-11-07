@@ -3,7 +3,7 @@ export const DE : any = {
   'SECONDS': 'Sekunden',
   'EXERCISES': 'Übungen',
   'SETTINGS': 'Einstellungen',
-  'AUTOMATIC_NEXT': 'Automatisch weiterschalten alle',
+  'AUTOMATIC_NEXT': 'Weiterschalten alle',
   'FINGER_CONTROL': {
     'TITLE': 'Finger Kontrolle',
     'HEADING': 'Haben Sie ihre Finger unter Kontrolle?',

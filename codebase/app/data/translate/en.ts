@@ -3,7 +3,7 @@ export const EN : any = {
   'SECONDS': 'seconds',
   'EXERCISES': 'exercises',
   'SETTINGS': 'settings',
-  'AUTOMATIC_NEXT': 'Automatic new exercise every',
+  'AUTOMATIC_NEXT': 'New exercise every',
   'FINGER_CONTROL': {
     'TITLE': 'finger control',
     'HEADING': 'Can you control your fingers?',
