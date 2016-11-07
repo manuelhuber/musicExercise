@@ -51,8 +51,12 @@ class MyApp {
   openPage (page : any) : any {
     // close the menu when clicking a link from the menu
     this.menu.close();
-    // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+    if (page.component === Settings) {
+      this.nav.push(page.component);
+    } else {
+      // navigate to the new page if it is not the current page
+      this.nav.setRoot(page.component);
+    }
   }
 }
 
