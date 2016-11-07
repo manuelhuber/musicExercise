@@ -60,7 +60,7 @@ const NOTE_SEPARATOR : string = ' / ';
 export function noteToAllCombinedStrings (note : number, separator : string = NOTE_SEPARATOR) : string {
   let a : string = noteToString(note, false);
   let b : string = noteToString(note, true);
-  return a === b ? a : [a, separator, b].join('');
+  return a === b ? a : [a, b].join(separator);
 }
 
 /**
