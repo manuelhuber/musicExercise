@@ -8,6 +8,7 @@
 @import "../ui/pages/exercises/intervals/intervals";
 @import "../ui/pages/exercises/scales-exercise/scales-exercise";
 @import "../ui/pages/exercises/advanced-finger-exercise/advanced-finger-exercise";
+@import "../ui/components/timer-button/timer-button";
 
 @for $i from 1 through 50 {
   .m-top-#{$i} {

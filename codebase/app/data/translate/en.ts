@@ -3,12 +3,12 @@ export const EN : any = {
   'SECONDS': 'seconds',
   'EXERCISES': 'exercises',
   'SETTINGS': 'settings',
+  'AUTOMATIC_NEXT': 'Automatic new exercise every',
   'FINGER_CONTROL': {
     'TITLE': 'finger control',
     'HEADING': 'Can you control your fingers?',
     'EXPLANATION': 'Move the fingers shown below. The letters L and R stand for the left and right hand. The number' +
     'indicates the Finger. 1 = thumb, 5 = pinky. Click the bug button to train your other fingers.',
-    'AUTOMATIC_NEXT': 'Automatic new exercise every',
     'DIFFICULTY': 'maximum finger count:'
   },
   'INTERVALS': {
@@ -89,7 +89,6 @@ export const EN : any = {
     'EXPLANATION': 'Press the fingers in the given order (1 = thumb, 5 = pinky) as if you were playing on a piano.' +
     'Try to hold each finger for the same amount of time. Repeat until you no longer feel any resistance in your ' +
     'muscles.',
-    'AUTOMATIC_NEXT': 'Automatic new exercise every',
     'DIFFICULTY': 'maximum count:'
   }
 };

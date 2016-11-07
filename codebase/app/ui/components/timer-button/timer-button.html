@@ -1,0 +1,20 @@
+<div>
+  <div>foo</div>
+  <button class="timer-button-button" (click)="buttonClick()">
+
+    <div class="timer-button-button-loading-bar"
+         [style.transition]="transitionString"
+         [style.right]="rightDistance"></div>
+
+    <div class="timer-button-button-content">
+      <h1>{{content}}</h1>
+    </div>
+  </button>
+
+  <div class="timer-button-time">
+    <ion-checkbox [(ngModel)]="automaticNext"></ion-checkbox>
+    <span translate="AUTOMATIC_NEXT"></span>
+    <ion-input class="timer-button-number-input" type="number" step="0.5" [(ngModel)]="timerSeconds"></ion-input>
+    <span translate="SECONDS"></span>
+  </div>
+</div>

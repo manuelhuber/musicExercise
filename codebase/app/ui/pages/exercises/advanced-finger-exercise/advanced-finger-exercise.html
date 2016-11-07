@@ -12,16 +12,9 @@
   <h3 translate="ADVANCED_FINGER_EXERCISE.HEADING"></h3>
   <div translate="ADVANCED_FINGER_EXERCISE.EXPLANATION"></div>
 
-  <button class="advanced-finger-exercise-button" (click)="buttonClick()">
-
-    <div class="advanced-finger-exercise-button-loading-bar"
-         [style.transition]="transitionString"
-         [style.right]="rightDistance"></div>
-
-    <div class="advanced-finger-exercise-button-content">
-      <h1>{{fingerString}}</h1>
-    </div>
-  </button>
+  <timer-button
+    [onClick]="onButtonClick"
+    [content]="exerciseString"></timer-button>
 
   <div>
     <span translate="ADVANCED_FINGER_EXERCISE.DIFFICULTY"></span>
@@ -30,14 +23,6 @@
                min="1"
                max="5"
                [(ngModel)]="difficulty"></ion-input>
-  </div>
-
-  <div class="advanced-finger-exercise-time">
-    <ion-checkbox [(ngModel)]="automaticNext"></ion-checkbox>
-    <span translate="ADVANCED_FINGER_EXERCISE.AUTOMATIC_NEXT"></span>
-    <ion-input class="advanced-finger-exercise-number-input" type="number" step="0.5"
-               [(ngModel)]="timerSeconds"></ion-input>
-    <span translate="SECONDS"></span>
   </div>
 
 </ion-content>

@@ -3,13 +3,13 @@ export const DE : any = {
   'SECONDS': 'Sekunden',
   'EXERCISES': 'Übungen',
   'SETTINGS': 'Einstellungen',
+  'AUTOMATIC_NEXT': 'Automatisch weiterschalten alle',
   'FINGER_CONTROL': {
     'TITLE': 'Finger Kontrolle',
     'HEADING': 'Haben Sie ihre Finger unter Kontrolle?',
     'EXPLANATION': 'Bewegen sie nur die unten aufgeführten Finger. Die Buchstaben L und R stehen für die linke bzw ' +
     'rechte Hand. Die Zahl dahinter steht für den Finger. 1 = Daumen, 5 = kleiner Finger. Klicken sie auf den großen' +
     'Button um die nächsten Finger zu trainieren.',
-    'AUTOMATIC_NEXT': 'Automatisch weiterschalten alle',
     'DIFFICULTY': 'Maximale Fingeranzahl:'
   },
   'INTERVALS': {
@@ -92,7 +92,6 @@ export const DE : any = {
     'EXPLANATION': 'Drücken Sie die Finger in der unten stehenden Reihenfolge (1 = Daumen, 5 = kleiner Finger), als' +
     'ob sie Klavier spielen würden. Achten sie darauf jeden Finger gleich lange zu halten. Wiederholen Sie die' +
     'Kombination so lange, bis Sie keinen Muskelwiderstand mehr spüren.',
-    'AUTOMATIC_NEXT': 'Automatisch weiterschalten alle',
     'DIFFICULTY': 'Maximale Anzahl:'
   }
 };
