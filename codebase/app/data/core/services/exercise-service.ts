@@ -53,7 +53,7 @@ export class ExerciseService {
       let storage : any = new LocalStorage();
       storage.set(SETTINGS_KEY, JSON.stringify(this.difficulty));
     } catch (e) {
-      // :(
+      // #sadface
     }
   }
 
@@ -62,7 +62,25 @@ export class ExerciseService {
       let storage : any = new LocalStorage();
       storage.get(SETTINGS_KEY, JSON.stringify(this.difficulty)).then(a => this.difficulty = a);
     } catch (e) {
-      this.difficulty = this.getDefaultDifficulty();
+      // #sadface
+    } finally {
+      if (!this.difficulty) {
+        this.difficulty = this.getDefaultDifficulty();
+        ;
+      } else {
+        this.fillSettingsWithDefaultValues();
+      }
+    }
+  }
+
+  private fillSettingsWithDefaultValues () : void {
+    let defaultSettings : ExerciseDifficulty = this.getDefaultDifficulty();
+    for (let key in defaultSettings) {
+      if (defaultSettings.hasOwnProperty(key)) {
+        if (this.difficulty[key] === undefined) {
+          this.difficulty[key] = defaultSettings[key];
+        }
+      }
     }
   }
 
