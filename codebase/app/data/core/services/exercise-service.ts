@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
+import {LocalStorage} from 'ionic-angular';
 
 export const MINIMUM_DIFFICULTY : number = 1;
 export const FINGER_CONTROL_MAX : number = 5;
+const SETTINGS_KEY : string = 'difficultysettings';
 
 export interface ExerciseDifficulty {
   fingerControl : number;
@@ -12,13 +14,18 @@ export interface ExerciseDifficulty {
 @Injectable()
 export class ExerciseService {
 
-  private difficulty : ExerciseDifficulty = ExerciseService.getDefaultDifficulty();
+  private difficulty : ExerciseDifficulty = this.getDefaultDifficulty();
+
+  constructor () {
+    this.loadSettings();
+  }
 
   setFingerControlDifficulty (difficulty : number) : void {
     this.difficulty.fingerControl =
       difficulty < 1 ? 1 :
         difficulty > 5 ? 5 :
           difficulty;
+    this.saveSettings();
   }
 
   setIntervalsDifficulty (difficulty : number) : void {
@@ -26,6 +33,7 @@ export class ExerciseService {
       difficulty < 1 ? 1 :
         difficulty > 11 ? 11 :
           difficulty;
+    this.saveSettings();
   }
 
   setAdvancedFingerExerciseDifficulty (difficulty : number) : void {
@@ -33,13 +41,32 @@ export class ExerciseService {
       difficulty < 1 ? 1 :
         difficulty > 10 ? 10 :
           difficulty;
+    this.saveSettings();
   }
 
   getDifficulty () : ExerciseDifficulty {
     return this.difficulty;
   }
 
-  static getDefaultDifficulty () : ExerciseDifficulty {
+  private saveSettings () : void {
+    try {
+      let storage : any = new LocalStorage();
+      storage.set(SETTINGS_KEY, JSON.stringify(this.difficulty));
+    } catch (e) {
+      // :(
+    }
+  }
+
+  private loadSettings () : void {
+    try {
+      let storage : any = new LocalStorage();
+      storage.get(SETTINGS_KEY, JSON.stringify(this.difficulty)).then(a => this.difficulty = a);
+    } catch (e) {
+      this.difficulty = this.getDefaultDifficulty();
+    }
+  }
+
+  private getDefaultDifficulty () : ExerciseDifficulty {
     return {
       fingerControl: 2,
       intervals: 8,
