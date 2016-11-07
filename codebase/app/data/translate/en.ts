@@ -7,7 +7,7 @@ export const EN : any = {
     'TITLE': 'finger control',
     'HEADING': 'Can you control your fingers?',
     'EXPLANATION': 'Move the fingers shown below. The letters L and R stand for the left and right hand. The number' +
-    'indicates the Finger. 1 = Thumb, 5 = Pinky. Click the bug button to train your other fingers.',
+    'indicates the Finger. 1 = thumb, 5 = pinky. Click the bug button to train your other fingers.',
     'AUTOMATIC_NEXT': 'Automatic new exercise every',
     'DIFFICULTY': 'maximum finger count:'
   },
@@ -82,5 +82,14 @@ export const EN : any = {
     'MINOR_ELEVENTH': 'minor eleventh',
     'THIRTEENTH': 'thirteenth',
     'MINOR_THIRTEENTH': 'minor thirteenth'
+  },
+  'ADVANCED_FINGER_EXERCISE': {
+    'TITLE': 'advanced finger exercise',
+    'HEADING': 'Can you control your fingers?',
+    'EXPLANATION': 'Press the fingers in the given order (1 = thumb, 5 = pinky) as if you were playing on a piano.' +
+    'Try to hold each finger for the same amount of time. Repeat until you no longer feel any resistance in your ' +
+    'muscles.',
+    'AUTOMATIC_NEXT': 'Automatic new exercise every',
+    'DIFFICULTY': 'maximum count:'
   }
 };

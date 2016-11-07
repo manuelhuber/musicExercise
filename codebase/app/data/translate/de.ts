@@ -85,5 +85,14 @@ export const DE : any = {
     'MINOR_ELEVENTH': 'Moll-Septakkord mit großer None und reiner Undezime',
     'THIRTEENTH': 'Dominantseptakkord mit großer None, reiner Undezime und großer Tredezime',
     'MINOR_THIRTEENTH': 'Moll-Septakkord mit großer None, reiner Undezime und großer Tredezime'
+  },
+  'ADVANCED_FINGER_EXERCISE': {
+    'TITLE': 'Erweiterte Fingerübung',
+    'HEADING': 'Bauen Sie ihre Widerstände ab',
+    'EXPLANATION': 'Drücken Sie die Finger in der unten stehenden Reihenfolge (1 = Daumen, 5 = kleiner Finger), als' +
+    'ob sie Klavier spielen würden. Achten sie darauf jeden Finger gleich lange zu halten. Wiederholen Sie die' +
+    'Kombination so lange, bis Sie keinen Muskelwiderstand mehr spüren.',
+    'AUTOMATIC_NEXT': 'Automatisch weiterschalten alle',
+    'DIFFICULTY': 'Maximale Anzahl:'
   }
 };

@@ -6,6 +6,7 @@ export const FINGER_CONTROL_MAX : number = 5;
 export interface ExerciseDifficulty {
   fingerControl : number;
   intervals : number;
+  advancedFingerExercise : number;
 }
 
 @Injectable()
@@ -27,6 +28,13 @@ export class ExerciseService {
           difficulty;
   }
 
+  setAdvancedFingerExerciseDifficulty (difficulty : number) : void {
+    this.difficulty.advancedFingerExercise =
+      difficulty < 1 ? 1 :
+        difficulty > 10 ? 10 :
+          difficulty;
+  }
+
   getDifficulty () : ExerciseDifficulty {
     return this.difficulty;
   }
@@ -34,7 +42,8 @@ export class ExerciseService {
   static getDefaultDifficulty () : ExerciseDifficulty {
     return {
       fingerControl: 2,
-      intervals: 8
+      intervals: 8,
+      advancedFingerExercise: 4
     };
   }
 }
