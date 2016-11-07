@@ -2,6 +2,9 @@ import {Component, Input} from '@angular/core';
 
 const TIMER_MINIMUM : number = 0.5;
 
+/**
+ * A giant button with a optional timer (and animation) to automatically press the button
+ */
 @Component({
   selector: 'timer-button',
   templateUrl: 'build/ui/components/timer-button/timer-button.html'

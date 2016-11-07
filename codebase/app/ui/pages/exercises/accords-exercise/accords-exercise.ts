@@ -4,7 +4,8 @@ import {AccordModel, ALL_ACCORDS} from '../../../../data/core/model/accords';
 import {Page} from 'ionic-angular';
 
 /**
- * The page fo
+ * The page for the accord exercise
+ * It's about working out all the notes of a given accord
  */
 @Page({
   templateUrl: 'build/ui/pages/exercises/accords-exercise/accords-exercise.html'
