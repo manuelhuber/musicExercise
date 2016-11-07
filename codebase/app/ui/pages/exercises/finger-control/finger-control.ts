@@ -55,7 +55,7 @@ export class FingerControl {
       // Constructor creates a random finger
       let potentialFinger : Finger = new Finger();
       // Add the finger if its not in the array already
-      if (!fingers.some(finger => finger.finger === potentialFinger.finger && finger.hand === potentialFinger.hand)) {
+      if (!fingers.some(finger => finger.equals(potentialFinger))) {
         fingers.push(potentialFinger);
       }
     }

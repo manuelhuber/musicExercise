@@ -31,6 +31,11 @@ export class Finger {
     return s;
   }
 
+  equals (otherFinger : Finger) : boolean {
+    return !otherFinger ? false
+      : otherFinger.finger === this.finger && otherFinger.hand === this.hand;
+  }
+
 }
 
 /**
