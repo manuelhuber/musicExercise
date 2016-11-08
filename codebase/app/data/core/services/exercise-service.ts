@@ -66,7 +66,6 @@ export class ExerciseService {
     } finally {
       if (!this.difficulty) {
         this.difficulty = this.getDefaultDifficulty();
-        ;
       } else {
         this.fillSettingsWithDefaultValues();
       }
